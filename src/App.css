@@ -19,6 +19,9 @@ body {
   background-color: #ffffff;
   min-height: 100vh;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* --- Header Section --- */
@@ -131,4 +134,26 @@ body {
     width: 100%;
     height: 200px;
   }
+}
+
+/* --- Footer Styling --- */
+.footer {
+  margin-top: auto;
+  padding: 24px 20px;
+  background-color: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+.footer-subtext {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  letter-spacing: 0.3px;
 }

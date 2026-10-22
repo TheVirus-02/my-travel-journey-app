@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import Entry from './components/Entry';
+import Footer from './components/Footer';
 import travelData from './data';
 
 export default function App(){
@@ -20,6 +21,7 @@ export default function App(){
     <>
       <Header />
       {travelEntries}
+      <Footer />
      
     </>
  )
