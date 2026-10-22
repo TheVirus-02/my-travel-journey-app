@@ -1,32 +1,134 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-.header{
-    background-color: red;
-    color: white;
-    text-align: center;
-    height: 2%;
-    font-size: 2rem;
-    margin: 10px 30px;
+/* --- Global Reset & Page Setup --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.article{
-    margin:30px 50px;
-    display: flex;
-}
-.img-container{
-
-}
-.image{
-    width: 20vw;
-    height: 30vh;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
 }
 
-.details{
-    margin: 0px 2%;
+#root {
+  width: 100%;
+  max-width: 650px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
-.locationPin{
-    height: 2vh;
-    margin-right: 4px;
+
+/* --- Header Section --- */
+.header {
+  background-color: #f55a5a;
+  color: #ffffff;
+  text-align: center;
+  padding: 16px 20px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+/* --- Entry Card Layout --- */
+.article {
+  display: flex;
+  gap: 20px;
+  padding: 30px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  align-items: center;
+}
+
+/* Image styling */
+.img-container {
+  flex-shrink: 0;
+  width: 130px;
+  height: 175px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Details Content --- */
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Pin + State + Google Map Link */
+.location-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.locationPin {
+  width: 12px;
+  height: auto;
+  opacity: 0.85;
+}
+
+.state {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #1e293b;
+  margin-right: 8px;
+}
+
+.mapLink {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.mapLink:hover {
+  color: #475569;
+}
+
+/* Title & Description */
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.dates {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.text {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #334155;
+}
+
+/* --- Responsive for Small Screens --- */
+@media (max-width: 480px) {
+  .article {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .img-container {
+    width: 100%;
+    height: 200px;
+  }
 }
